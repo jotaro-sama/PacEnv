@@ -1,2 +1,2 @@
 # PacEnv
-An environment for Pac Man compatible with the OpenAI Gym interface 
+An environment for Ms. Pac Man compatible with the OpenAI Gym interface 

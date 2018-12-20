@@ -17,7 +17,7 @@ printMatrix(screen)
 for i in range(100):
         action = env.action_space.sample()
         print(action)
-        (screen, score, power), _, done, info = env.step("left")
+        (screen, score, power), _, done, info = env.step(action)
         printMatrix(screen)
         print("Score: " + str(score) + ", Power :" + str(power))
         print(str(info["self.position"]) + ", pow_timeout: " + str(info["self.power_timeout"]))

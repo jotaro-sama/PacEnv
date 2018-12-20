@@ -42,6 +42,15 @@ class PacEnv():
             elif a=="down":
                 new_pos = pos[0] + 1, pos[1]
 
+            if (new_pos[0] < 0):
+                 new_pos[0] = 7
+            if (new_pos[1] < 0):
+                new_pos[1] = 7
+            if (new_pos[0] > 7):
+                new_pos[0] = 0
+            if (new_pos[1] > 7):
+                new_pos[1] = 0
+
             if st[new_pos[0]][new_pos[1]] == "G":
                 self.game_over = True
             elif st[new_pos[0]][new_pos[1]] == ".":
@@ -55,7 +64,7 @@ class PacEnv():
                 self.position = new_pos
         ob = (self.level_state, self.score)
         return ob, reward, self.game_over, {"self.position" : self.position}
-        
+
     def reset(self):
         self.level_state = init_state
         self.score = 0

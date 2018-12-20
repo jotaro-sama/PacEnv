@@ -35,7 +35,7 @@ class PacEnv():
 
             if a=="up":
                 new_pos = pos[0] - 1, pos[1]
-            elif a=="left" and :
+            elif a=="left":
                 new_pos = pos[0], pos[1] -1
             elif a=="right":
                 new_pos = pos[0], pos[1] + 1
@@ -54,7 +54,7 @@ class PacEnv():
             if st[new_pos[0]][new_pos[1]] == "G":
                 self.game_over = True
             elif st[new_pos[0]][new_pos[1]] == ".":
-                self.score++
+                self.score += 1
                 st[new_pos[0]][new_pos[1]] == "P"
                 st[pos[0]][pos[1]] == " "
                 self.position = new_pos
